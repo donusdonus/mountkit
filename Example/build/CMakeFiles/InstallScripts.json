@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/mountkit/Example/build/cmake_install.cmake",
+		"C:/mountkit/Example/build/_deps/freertos-build/cmake_install.cmake",
+		"C:/mountkit/Example/build/_deps/freertos-build/include/cmake_install.cmake",
+		"C:/mountkit/Example/build/_deps/freertos-build/portable/cmake_install.cmake",
+		"C:/mountkit/Example/build/mountkit_build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
