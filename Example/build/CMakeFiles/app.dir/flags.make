@@ -7,11 +7,11 @@ C_DEFINES =
 
 C_INCLUDES = @CMakeFiles/app.dir/includes_C.rsp
 
-C_FLAGS = -std=gnu11
+C_FLAGS = -g -std=gnu11
 
 CXX_DEFINES = 
 
 CXX_INCLUDES = @CMakeFiles/app.dir/includes_CXX.rsp
 
-CXX_FLAGS = -std=gnu++11
+CXX_FLAGS = -g -std=gnu++11
 

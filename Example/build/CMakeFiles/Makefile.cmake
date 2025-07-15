@@ -69,7 +69,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "_deps/freertos-build/CMakeFiles/CMakeDirectoryInformation.cmake"
   "_deps/freertos-build/include/CMakeFiles/CMakeDirectoryInformation.cmake"
   "_deps/freertos-build/portable/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "mountkit_build/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Mountkit/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -77,5 +77,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/app.dir/DependInfo.cmake"
   "_deps/freertos-build/CMakeFiles/freertos_kernel.dir/DependInfo.cmake"
   "_deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/DependInfo.cmake"
-  "mountkit_build/CMakeFiles/Mountkit.dir/DependInfo.cmake"
+  "Mountkit/CMakeFiles/Mountkit.dir/DependInfo.cmake"
   )

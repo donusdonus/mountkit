@@ -6,5 +6,5 @@ C_DEFINES =
 
 C_INCLUDES = @CMakeFiles/freertos_kernel_port.dir/includes_C.rsp
 
-C_FLAGS = -std=gnu11
+C_FLAGS = -g -std=gnu11
 

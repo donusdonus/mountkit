@@ -164,7 +164,7 @@ Mountkit: cmake_check_build_system
 
 # fast build rule for target.
 Mountkit/fast:
-	$(MAKE) $(MAKESILENT) -f mountkit_build\CMakeFiles\Mountkit.dir\build.make mountkit_build/CMakeFiles/Mountkit.dir/build
+	$(MAKE) $(MAKESILENT) -f Mountkit\CMakeFiles\Mountkit.dir\build.make Mountkit/CMakeFiles/Mountkit.dir/build
 .PHONY : Mountkit/fast
 
 _deps/freertos-src/event_groups.obj: _deps/freertos-src/event_groups.c.obj

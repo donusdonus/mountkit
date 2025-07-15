@@ -9,6 +9,6 @@ C:/mountkit/Example/build/_deps/freertos-build/include/CMakeFiles/rebuild_cache.
 C:/mountkit/Example/build/_deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir
 C:/mountkit/Example/build/_deps/freertos-build/portable/CMakeFiles/edit_cache.dir
 C:/mountkit/Example/build/_deps/freertos-build/portable/CMakeFiles/rebuild_cache.dir
-C:/mountkit/Example/build/mountkit_build/CMakeFiles/Mountkit.dir
-C:/mountkit/Example/build/mountkit_build/CMakeFiles/edit_cache.dir
-C:/mountkit/Example/build/mountkit_build/CMakeFiles/rebuild_cache.dir
+C:/mountkit/Example/build/Mountkit/CMakeFiles/Mountkit.dir
+C:/mountkit/Example/build/Mountkit/CMakeFiles/edit_cache.dir
+C:/mountkit/Example/build/Mountkit/CMakeFiles/rebuild_cache.dir

@@ -64,25 +64,44 @@ CMAKE_BINARY_DIR = C:\mountkit\Example\build
 # The main recursive "all" target.
 all: CMakeFiles/app.dir/all
 all: _deps/freertos-build/all
-all: mountkit_build/all
+all: Mountkit/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/app.dir/codegen
 codegen: _deps/freertos-build/codegen
-codegen: mountkit_build/codegen
+codegen: Mountkit/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
 preinstall: _deps/freertos-build/preinstall
-preinstall: mountkit_build/preinstall
+preinstall: Mountkit/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/app.dir/clean
 clean: _deps/freertos-build/clean
-clean: mountkit_build/clean
+clean: Mountkit/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory Mountkit
+
+# Recursive "all" directory target.
+Mountkit/all: Mountkit/CMakeFiles/Mountkit.dir/all
+.PHONY : Mountkit/all
+
+# Recursive "codegen" directory target.
+Mountkit/codegen: Mountkit/CMakeFiles/Mountkit.dir/codegen
+.PHONY : Mountkit/codegen
+
+# Recursive "preinstall" directory target.
+Mountkit/preinstall:
+.PHONY : Mountkit/preinstall
+
+# Recursive "clean" directory target.
+Mountkit/clean: Mountkit/CMakeFiles/Mountkit.dir/clean
+.PHONY : Mountkit/clean
 
 #=============================================================================
 # Directory level rules for directory _deps/freertos-build
@@ -149,31 +168,12 @@ _deps/freertos-build/portable/clean: _deps/freertos-build/portable/CMakeFiles/fr
 .PHONY : _deps/freertos-build/portable/clean
 
 #=============================================================================
-# Directory level rules for directory mountkit_build
-
-# Recursive "all" directory target.
-mountkit_build/all: mountkit_build/CMakeFiles/Mountkit.dir/all
-.PHONY : mountkit_build/all
-
-# Recursive "codegen" directory target.
-mountkit_build/codegen: mountkit_build/CMakeFiles/Mountkit.dir/codegen
-.PHONY : mountkit_build/codegen
-
-# Recursive "preinstall" directory target.
-mountkit_build/preinstall:
-.PHONY : mountkit_build/preinstall
-
-# Recursive "clean" directory target.
-mountkit_build/clean: mountkit_build/CMakeFiles/Mountkit.dir/clean
-.PHONY : mountkit_build/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/app.dir
 
 # All Build rule for target.
 CMakeFiles/app.dir/all: _deps/freertos-build/CMakeFiles/freertos_kernel.dir/all
 CMakeFiles/app.dir/all: _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/all
-CMakeFiles/app.dir/all: mountkit_build/CMakeFiles/Mountkit.dir/all
+CMakeFiles/app.dir/all: Mountkit/CMakeFiles/Mountkit.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\mountkit\Example\build\CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11 "Built target app"
@@ -266,36 +266,36 @@ _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/clean:
 .PHONY : _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/clean
 
 #=============================================================================
-# Target rules for target mountkit_build/CMakeFiles/Mountkit.dir
+# Target rules for target Mountkit/CMakeFiles/Mountkit.dir
 
 # All Build rule for target.
-mountkit_build/CMakeFiles/Mountkit.dir/all:
-	$(MAKE) $(MAKESILENT) -f mountkit_build\CMakeFiles\Mountkit.dir\build.make mountkit_build/CMakeFiles/Mountkit.dir/depend
-	$(MAKE) $(MAKESILENT) -f mountkit_build\CMakeFiles\Mountkit.dir\build.make mountkit_build/CMakeFiles/Mountkit.dir/build
+Mountkit/CMakeFiles/Mountkit.dir/all:
+	$(MAKE) $(MAKESILENT) -f Mountkit\CMakeFiles\Mountkit.dir\build.make Mountkit/CMakeFiles/Mountkit.dir/depend
+	$(MAKE) $(MAKESILENT) -f Mountkit\CMakeFiles\Mountkit.dir\build.make Mountkit/CMakeFiles/Mountkit.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\mountkit\Example\build\CMakeFiles --progress-num=1,2 "Built target Mountkit"
-.PHONY : mountkit_build/CMakeFiles/Mountkit.dir/all
+.PHONY : Mountkit/CMakeFiles/Mountkit.dir/all
 
 # Build rule for subdir invocation for target.
-mountkit_build/CMakeFiles/Mountkit.dir/rule: cmake_check_build_system
+Mountkit/CMakeFiles/Mountkit.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\mountkit\Example\build\CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 mountkit_build/CMakeFiles/Mountkit.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Mountkit/CMakeFiles/Mountkit.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\mountkit\Example\build\CMakeFiles 0
-.PHONY : mountkit_build/CMakeFiles/Mountkit.dir/rule
+.PHONY : Mountkit/CMakeFiles/Mountkit.dir/rule
 
 # Convenience name for target.
-Mountkit: mountkit_build/CMakeFiles/Mountkit.dir/rule
+Mountkit: Mountkit/CMakeFiles/Mountkit.dir/rule
 .PHONY : Mountkit
 
 # codegen rule for target.
-mountkit_build/CMakeFiles/Mountkit.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f mountkit_build\CMakeFiles\Mountkit.dir\build.make mountkit_build/CMakeFiles/Mountkit.dir/codegen
+Mountkit/CMakeFiles/Mountkit.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f Mountkit\CMakeFiles\Mountkit.dir\build.make Mountkit/CMakeFiles/Mountkit.dir/codegen
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\mountkit\Example\build\CMakeFiles --progress-num=1,2 "Finished codegen for target Mountkit"
-.PHONY : mountkit_build/CMakeFiles/Mountkit.dir/codegen
+.PHONY : Mountkit/CMakeFiles/Mountkit.dir/codegen
 
 # clean rule for target.
-mountkit_build/CMakeFiles/Mountkit.dir/clean:
-	$(MAKE) $(MAKESILENT) -f mountkit_build\CMakeFiles\Mountkit.dir\build.make mountkit_build/CMakeFiles/Mountkit.dir/clean
-.PHONY : mountkit_build/CMakeFiles/Mountkit.dir/clean
+Mountkit/CMakeFiles/Mountkit.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Mountkit\CMakeFiles\Mountkit.dir\build.make Mountkit/CMakeFiles/Mountkit.dir/clean
+.PHONY : Mountkit/CMakeFiles/Mountkit.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

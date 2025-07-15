@@ -214,7 +214,7 @@ app.exe: CMakeFiles/app.dir/_deps/freertos-src/event_groups.c.obj
 app.exe: CMakeFiles/app.dir/_deps/freertos-src/portable/MemMang/heap_4.c.obj
 app.exe: CMakeFiles/app.dir/_deps/freertos-src/portable/MSVC-MingW/port.c.obj
 app.exe: CMakeFiles/app.dir/build.make
-app.exe: mountkit_build/libMountkit.a
+app.exe: Mountkit/libMountkit.a
 app.exe: _deps/freertos-build/libfreertos_kernel.a
 app.exe: CMakeFiles/app.dir/linkLibs.rsp
 app.exe: CMakeFiles/app.dir/objects1.rsp

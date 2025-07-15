@@ -7,38 +7,47 @@
 #include <stdint.h>
 
 
+
+enum wcmd {READ,WRITE,APPEND};
+
 typedef struct {
     uint8_t* value;
     size_t size;
     size_t capacity;
-} DataChunk;
+} MyFile;
 
-typedef struct FileEntry {
-    DataChunk name;
-    DataChunk content;
-    struct FileEntry* next;
-} FileEntry;
+typedef struct MyFolder {
+    MyFile name;
+    MyFile* files;
+    MyFolder* dir;
+} MyFolder;
 
-typedef struct Directory {
-    DataChunk name;
-    FileEntry* files;
-    struct Directory* subdirs;
-    struct Directory* next;
-} Directory;
-
-class MiniMountFS {
+class Mountkit {
 public:
-    MiniMountFS(size_t poolSize);
-    ~MiniMountFS();
+    Mountkit(const char *name,size_t size);
+   // ~Mountkit();
 
-    void createFile(const char* name, const uint8_t* data, size_t size);
+    MyFile* fopen(const char* name, const uint8_t* data, size_t size,wcmd mode);
+    MyFile* fopen(const char* name, const char *text,wcmd mode);
+    MyFile* find(const char* name);
     void listFiles();
 
 private:
-    uint8_t* pool;
+
+    MyFolder* cd(const char* name);
+    MyFolder* mkdir(MyFolder *src,const char* name);
+    MyFolder* rmdir(MyFolder *src,const char* name);
+    MyFile* dir(MyFolder *src);
+    MyFile* mk(MyFile *src,const char* name);
+    MyFile* rm(MyFile *src,const char* name);
+
     size_t capacity;
     size_t used;
-    Directory* root;
+    MyFolder* root;
+
+
+    /* temporary variable */
+    size_t temp_int;
 };
 
 
