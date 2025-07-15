@@ -2,13 +2,15 @@
 #include <stdint.h>
 #include "Mountkit.h"
 
-Mountkit fs("station",10000);
+Mountkit fs("C",10000);
 
 int main()
 {
-    fs.fopen("station/config/erp.txt","HELLO WORLD",wcmd::APPEND);
-    printf("Hello World\r\n");   
-    
+    fs.mkdir(&fs.drive.folder,"Folder1");
+    fs.mkdir(&fs.drive.folder->folder,"Folder2");
+    fs.mkdir(&fs.drive.folder->folder->subfolder,"Folder3");
+    fs.mkdir(&fs.drive.folder->folder->folder,"Folder7");
+    int a = 0;
     while(true);
     return 0 ;
 }

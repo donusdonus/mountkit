@@ -52,10 +52,10 @@ RM = C:\msys64\mingw32\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\mountkit\Example
+CMAKE_SOURCE_DIR = D:\mountkit\Example
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\mountkit\Example\build
+CMAKE_BINARY_DIR = D:\mountkit\Example\build
 
 # Include any dependencies generated for this target.
 include _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/depend.make
@@ -75,16 +75,16 @@ _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/MSVC-MingW/por
 _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/MSVC-MingW/port.c.obj: _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/includes_C.rsp
 _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/MSVC-MingW/port.c.obj: _deps/freertos-src/portable/MSVC-MingW/port.c
 _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/MSVC-MingW/port.c.obj: _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\mountkit\Example\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/MSVC-MingW/port.c.obj"
-	cd /d C:\mountkit\Example\build\_deps\freertos-build\portable && C:\msys64\mingw32\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/MSVC-MingW/port.c.obj -MF CMakeFiles\freertos_kernel_port.dir\MSVC-MingW\port.c.obj.d -o CMakeFiles\freertos_kernel_port.dir\MSVC-MingW\port.c.obj -c C:\mountkit\Example\build\_deps\freertos-src\portable\MSVC-MingW\port.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mountkit\Example\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/MSVC-MingW/port.c.obj"
+	cd /d D:\mountkit\Example\build\_deps\freertos-build\portable && C:\msys64\mingw32\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/MSVC-MingW/port.c.obj -MF CMakeFiles\freertos_kernel_port.dir\MSVC-MingW\port.c.obj.d -o CMakeFiles\freertos_kernel_port.dir\MSVC-MingW\port.c.obj -c D:\mountkit\Example\build\_deps\freertos-src\portable\MSVC-MingW\port.c
 
 _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/MSVC-MingW/port.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/freertos_kernel_port.dir/MSVC-MingW/port.c.i"
-	cd /d C:\mountkit\Example\build\_deps\freertos-build\portable && C:\msys64\mingw32\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\mountkit\Example\build\_deps\freertos-src\portable\MSVC-MingW\port.c > CMakeFiles\freertos_kernel_port.dir\MSVC-MingW\port.c.i
+	cd /d D:\mountkit\Example\build\_deps\freertos-build\portable && C:\msys64\mingw32\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\mountkit\Example\build\_deps\freertos-src\portable\MSVC-MingW\port.c > CMakeFiles\freertos_kernel_port.dir\MSVC-MingW\port.c.i
 
 _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/MSVC-MingW/port.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/freertos_kernel_port.dir/MSVC-MingW/port.c.s"
-	cd /d C:\mountkit\Example\build\_deps\freertos-build\portable && C:\msys64\mingw32\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\mountkit\Example\build\_deps\freertos-src\portable\MSVC-MingW\port.c -o CMakeFiles\freertos_kernel_port.dir\MSVC-MingW\port.c.s
+	cd /d D:\mountkit\Example\build\_deps\freertos-build\portable && C:\msys64\mingw32\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\mountkit\Example\build\_deps\freertos-src\portable\MSVC-MingW\port.c -o CMakeFiles\freertos_kernel_port.dir\MSVC-MingW\port.c.s
 
 freertos_kernel_port: _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/MSVC-MingW/port.c.obj
 freertos_kernel_port: _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/build.make
@@ -95,10 +95,10 @@ _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/build: freerto
 .PHONY : _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/build
 
 _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/clean:
-	cd /d C:\mountkit\Example\build\_deps\freertos-build\portable && $(CMAKE_COMMAND) -P CMakeFiles\freertos_kernel_port.dir\cmake_clean.cmake
+	cd /d D:\mountkit\Example\build\_deps\freertos-build\portable && $(CMAKE_COMMAND) -P CMakeFiles\freertos_kernel_port.dir\cmake_clean.cmake
 .PHONY : _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/clean
 
 _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\mountkit\Example C:\mountkit\Example\build\_deps\freertos-src\portable C:\mountkit\Example\build C:\mountkit\Example\build\_deps\freertos-build\portable C:\mountkit\Example\build\_deps\freertos-build\portable\CMakeFiles\freertos_kernel_port.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\mountkit\Example D:\mountkit\Example\build\_deps\freertos-src\portable D:\mountkit\Example\build D:\mountkit\Example\build\_deps\freertos-build\portable D:\mountkit\Example\build\_deps\freertos-build\portable\CMakeFiles\freertos_kernel_port.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/depend
 

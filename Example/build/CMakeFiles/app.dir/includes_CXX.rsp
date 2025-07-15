@@ -1,1 +1,1 @@
--I"C:/mountkit/Example/build/_deps/freertos-src/include" -I"C:/mountkit/Example/build/_deps/freertos-src/portable/MSVC-MingW" -IC:/mountkit/src -I"C:/mountkit/Example/build/_deps/freertos-src/include/." -IC:/mountkit/Example
+-I"D:/mountkit/Example/build/_deps/freertos-src/include" -I"D:/mountkit/Example/build/_deps/freertos-src/portable/MSVC-MingW" -ID:/mountkit/src -I"D:/mountkit/Example/build/_deps/freertos-src/include/." -ID:/mountkit/Example

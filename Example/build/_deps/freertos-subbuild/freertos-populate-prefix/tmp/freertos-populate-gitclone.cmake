@@ -3,11 +3,11 @@
 
 cmake_minimum_required(VERSION ${CMAKE_VERSION}) # this file comes with cmake
 
-if(EXISTS "C:/mountkit/Example/build/_deps/freertos-subbuild/freertos-populate-prefix/src/freertos-populate-stamp/freertos-populate-gitclone-lastrun.txt" AND EXISTS "C:/mountkit/Example/build/_deps/freertos-subbuild/freertos-populate-prefix/src/freertos-populate-stamp/freertos-populate-gitinfo.txt" AND
-  "C:/mountkit/Example/build/_deps/freertos-subbuild/freertos-populate-prefix/src/freertos-populate-stamp/freertos-populate-gitclone-lastrun.txt" IS_NEWER_THAN "C:/mountkit/Example/build/_deps/freertos-subbuild/freertos-populate-prefix/src/freertos-populate-stamp/freertos-populate-gitinfo.txt")
+if(EXISTS "D:/mountkit/Example/build/_deps/freertos-subbuild/freertos-populate-prefix/src/freertos-populate-stamp/freertos-populate-gitclone-lastrun.txt" AND EXISTS "D:/mountkit/Example/build/_deps/freertos-subbuild/freertos-populate-prefix/src/freertos-populate-stamp/freertos-populate-gitinfo.txt" AND
+  "D:/mountkit/Example/build/_deps/freertos-subbuild/freertos-populate-prefix/src/freertos-populate-stamp/freertos-populate-gitclone-lastrun.txt" IS_NEWER_THAN "D:/mountkit/Example/build/_deps/freertos-subbuild/freertos-populate-prefix/src/freertos-populate-stamp/freertos-populate-gitinfo.txt")
   message(VERBOSE
     "Avoiding repeated git clone, stamp file is up to date: "
-    "'C:/mountkit/Example/build/_deps/freertos-subbuild/freertos-populate-prefix/src/freertos-populate-stamp/freertos-populate-gitclone-lastrun.txt'"
+    "'D:/mountkit/Example/build/_deps/freertos-subbuild/freertos-populate-prefix/src/freertos-populate-stamp/freertos-populate-gitclone-lastrun.txt'"
   )
   return()
 endif()
@@ -22,12 +22,12 @@ else()
 endif()
 
 execute_process(
-  COMMAND ${CMAKE_COMMAND} -E rm -rf "C:/mountkit/Example/build/_deps/freertos-src"
+  COMMAND ${CMAKE_COMMAND} -E rm -rf "D:/mountkit/Example/build/_deps/freertos-src"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to remove directory: 'C:/mountkit/Example/build/_deps/freertos-src'")
+  message(FATAL_ERROR "Failed to remove directory: 'D:/mountkit/Example/build/_deps/freertos-src'")
 endif()
 
 # try the clone 3 times in case there is an odd git clone issue
@@ -37,7 +37,7 @@ while(error_code AND number_of_tries LESS 3)
   execute_process(
     COMMAND "C:/Program Files/Git/cmd/git.exe"
             clone --no-checkout --config "advice.detachedHead=false" "https://github.com/FreeRTOS/FreeRTOS-Kernel.git" "freertos-src"
-    WORKING_DIRECTORY "C:/mountkit/Example/build/_deps"
+    WORKING_DIRECTORY "D:/mountkit/Example/build/_deps"
     RESULT_VARIABLE error_code
     ${maybe_show_command}
   )
@@ -53,7 +53,7 @@ endif()
 execute_process(
   COMMAND "C:/Program Files/Git/cmd/git.exe"
           checkout "main" --
-  WORKING_DIRECTORY "C:/mountkit/Example/build/_deps/freertos-src"
+  WORKING_DIRECTORY "D:/mountkit/Example/build/_deps/freertos-src"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
@@ -66,22 +66,22 @@ if(init_submodules)
   execute_process(
     COMMAND "C:/Program Files/Git/cmd/git.exe" 
             submodule update --recursive --init 
-    WORKING_DIRECTORY "C:/mountkit/Example/build/_deps/freertos-src"
+    WORKING_DIRECTORY "D:/mountkit/Example/build/_deps/freertos-src"
     RESULT_VARIABLE error_code
     ${maybe_show_command}
   )
 endif()
 if(error_code)
-  message(FATAL_ERROR "Failed to update submodules in: 'C:/mountkit/Example/build/_deps/freertos-src'")
+  message(FATAL_ERROR "Failed to update submodules in: 'D:/mountkit/Example/build/_deps/freertos-src'")
 endif()
 
 # Complete success, update the script-last-run stamp file:
 #
 execute_process(
-  COMMAND ${CMAKE_COMMAND} -E copy "C:/mountkit/Example/build/_deps/freertos-subbuild/freertos-populate-prefix/src/freertos-populate-stamp/freertos-populate-gitinfo.txt" "C:/mountkit/Example/build/_deps/freertos-subbuild/freertos-populate-prefix/src/freertos-populate-stamp/freertos-populate-gitclone-lastrun.txt"
+  COMMAND ${CMAKE_COMMAND} -E copy "D:/mountkit/Example/build/_deps/freertos-subbuild/freertos-populate-prefix/src/freertos-populate-stamp/freertos-populate-gitinfo.txt" "D:/mountkit/Example/build/_deps/freertos-subbuild/freertos-populate-prefix/src/freertos-populate-stamp/freertos-populate-gitclone-lastrun.txt"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to copy script-last-run stamp file: 'C:/mountkit/Example/build/_deps/freertos-subbuild/freertos-populate-prefix/src/freertos-populate-stamp/freertos-populate-gitclone-lastrun.txt'")
+  message(FATAL_ERROR "Failed to copy script-last-run stamp file: 'D:/mountkit/Example/build/_deps/freertos-subbuild/freertos-populate-prefix/src/freertos-populate-stamp/freertos-populate-gitclone-lastrun.txt'")
 endif()

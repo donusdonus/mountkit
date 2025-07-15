@@ -1,4 +1,4 @@
-CMakeFiles/app.dir/main.cpp.obj: C:\mountkit\Example\main.cpp \
+CMakeFiles/app.dir/main.cpp.obj: D:\mountkit\Example\main.cpp \
  C:/msys64/mingw32/include/stdio.h \
  C:/msys64/mingw32/include/corecrt_stdio_config.h \
  C:/msys64/mingw32/include/corecrt.h C:/msys64/mingw32/include/_mingw.h \
@@ -12,7 +12,7 @@ CMakeFiles/app.dir/main.cpp.obj: C:\mountkit\Example\main.cpp \
  C:/msys64/mingw32/lib/gcc/i686-w64-mingw32/15.1.0/include/stdint.h \
  C:/msys64/mingw32/include/stdint.h C:/msys64/mingw32/include/crtdefs.h \
  C:/msys64/mingw32/lib/gcc/i686-w64-mingw32/15.1.0/include/stddef.h \
- C:/msys64/mingw32/include/stddef.h C:/mountkit/src/Mountkit.h \
+ C:/msys64/mingw32/include/stddef.h D:/mountkit/src/Mountkit.h \
  C:/msys64/mingw32/include/c++/15.1.0/stdlib.h \
  C:/msys64/mingw32/include/c++/15.1.0/cstdlib \
  C:/msys64/mingw32/include/c++/15.1.0/i686-w64-mingw32/bits/c++config.h \

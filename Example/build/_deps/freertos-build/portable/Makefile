@@ -56,10 +56,10 @@ RM = C:\msys64\mingw32\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\mountkit\Example
+CMAKE_SOURCE_DIR = D:\mountkit\Example
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\mountkit\Example\build
+CMAKE_BINARY_DIR = D:\mountkit\Example\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,14 +86,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\mountkit\Example\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\mountkit\Example\build\CMakeFiles C:\mountkit\Example\build\_deps\freertos-build\portable\\CMakeFiles\progress.marks
-	cd /d C:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/freertos-build/portable/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\mountkit\Example\build\CMakeFiles 0
+	cd /d D:\mountkit\Example\build && $(CMAKE_COMMAND) -E cmake_progress_start D:\mountkit\Example\build\CMakeFiles D:\mountkit\Example\build\_deps\freertos-build\portable\\CMakeFiles\progress.marks
+	cd /d D:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/freertos-build/portable/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\mountkit\Example\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/freertos-build/portable/clean
+	cd /d D:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/freertos-build/portable/clean
 .PHONY : clean
 
 # The main clean target
@@ -102,22 +102,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/freertos-build/portable/preinstall
+	cd /d D:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/freertos-build/portable/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/freertos-build/portable/preinstall
+	cd /d D:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/freertos-build/portable/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\mountkit\Example\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d D:\mountkit\Example\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/rule:
-	cd /d C:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/rule
+	cd /d D:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/rule
 .PHONY : _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/rule
 
 # Convenience name for target.
@@ -126,7 +126,7 @@ freertos_kernel_port: _deps/freertos-build/portable/CMakeFiles/freertos_kernel_p
 
 # fast build rule for target.
 freertos_kernel_port/fast:
-	cd /d C:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f _deps\freertos-build\portable\CMakeFiles\freertos_kernel_port.dir\build.make _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/build
+	cd /d D:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f _deps\freertos-build\portable\CMakeFiles\freertos_kernel_port.dir\build.make _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/build
 .PHONY : freertos_kernel_port/fast
 
 MSVC-MingW/port.obj: MSVC-MingW/port.c.obj
@@ -134,7 +134,7 @@ MSVC-MingW/port.obj: MSVC-MingW/port.c.obj
 
 # target to build an object file
 MSVC-MingW/port.c.obj:
-	cd /d C:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f _deps\freertos-build\portable\CMakeFiles\freertos_kernel_port.dir\build.make _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/MSVC-MingW/port.c.obj
+	cd /d D:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f _deps\freertos-build\portable\CMakeFiles\freertos_kernel_port.dir\build.make _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/MSVC-MingW/port.c.obj
 .PHONY : MSVC-MingW/port.c.obj
 
 MSVC-MingW/port.i: MSVC-MingW/port.c.i
@@ -142,7 +142,7 @@ MSVC-MingW/port.i: MSVC-MingW/port.c.i
 
 # target to preprocess a source file
 MSVC-MingW/port.c.i:
-	cd /d C:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f _deps\freertos-build\portable\CMakeFiles\freertos_kernel_port.dir\build.make _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/MSVC-MingW/port.c.i
+	cd /d D:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f _deps\freertos-build\portable\CMakeFiles\freertos_kernel_port.dir\build.make _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/MSVC-MingW/port.c.i
 .PHONY : MSVC-MingW/port.c.i
 
 MSVC-MingW/port.s: MSVC-MingW/port.c.s
@@ -150,7 +150,7 @@ MSVC-MingW/port.s: MSVC-MingW/port.c.s
 
 # target to generate assembly for a file
 MSVC-MingW/port.c.s:
-	cd /d C:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f _deps\freertos-build\portable\CMakeFiles\freertos_kernel_port.dir\build.make _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/MSVC-MingW/port.c.s
+	cd /d D:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f _deps\freertos-build\portable\CMakeFiles\freertos_kernel_port.dir\build.make _deps/freertos-build/portable/CMakeFiles/freertos_kernel_port.dir/MSVC-MingW/port.c.s
 .PHONY : MSVC-MingW/port.c.s
 
 # Help Target
@@ -176,6 +176,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\mountkit\Example\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d D:\mountkit\Example\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
