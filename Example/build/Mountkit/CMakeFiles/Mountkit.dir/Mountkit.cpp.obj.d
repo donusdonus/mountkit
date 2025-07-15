@@ -1,5 +1,5 @@
 Mountkit/CMakeFiles/Mountkit.dir/Mountkit.cpp.obj: \
- D:\mountkit\src\Mountkit.cpp D:\mountkit\src\Mountkit.h \
+ C:\mountkit\src\Mountkit.cpp C:\mountkit\src\Mountkit.h \
  C:/msys64/mingw32/include/stdio.h \
  C:/msys64/mingw32/include/corecrt_stdio_config.h \
  C:/msys64/mingw32/include/corecrt.h C:/msys64/mingw32/include/_mingw.h \

@@ -3,9 +3,9 @@
 # No other meaning or use of this file is supported.
 
 method=git
-command=C:/msys64/mingw32/bin/cmake.exe;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;D:/mountkit/Example/build/_deps/freertos-subbuild/freertos-populate-prefix/tmp/freertos-populate-gitclone.cmake
-source_dir=D:/mountkit/Example/build/_deps/freertos-src
-work_dir=D:/mountkit/Example/build/_deps
+command=C:/msys64/mingw32/bin/cmake.exe;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;C:/mountkit/Example/build/_deps/freertos-subbuild/freertos-populate-prefix/tmp/freertos-populate-gitclone.cmake
+source_dir=C:/mountkit/Example/build/_deps/freertos-src
+work_dir=C:/mountkit/Example/build/_deps
 repository=https://github.com/FreeRTOS/FreeRTOS-Kernel.git
 remote=origin
 init_submodules=TRUE

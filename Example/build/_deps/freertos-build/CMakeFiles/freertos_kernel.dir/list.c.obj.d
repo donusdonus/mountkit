@@ -1,5 +1,5 @@
 _deps/freertos-build/CMakeFiles/freertos_kernel.dir/list.c.obj: \
- D:\mountkit\Example\build\_deps\freertos-src\list.c \
+ C:\mountkit\Example\build\_deps\freertos-src\list.c \
  C:/msys64/mingw32/include/stdlib.h C:/msys64/mingw32/include/corecrt.h \
  C:/msys64/mingw32/include/_mingw.h \
  C:/msys64/mingw32/include/_mingw_mac.h \
@@ -14,15 +14,15 @@ _deps/freertos-build/CMakeFiles/freertos_kernel.dir/list.c.obj: \
  C:/msys64/mingw32/include/malloc.h \
  C:/msys64/mingw32/lib/gcc/i686-w64-mingw32/15.1.0/include/mm_malloc.h \
  C:/msys64/mingw32/include/errno.h \
- D:/mountkit/Example/build/_deps/freertos-src/include/FreeRTOS.h \
+ C:/mountkit/Example/build/_deps/freertos-src/include/FreeRTOS.h \
  C:/msys64/mingw32/lib/gcc/i686-w64-mingw32/15.1.0/include/stddef.h \
  C:/msys64/mingw32/include/stddef.h \
  C:/msys64/mingw32/lib/gcc/i686-w64-mingw32/15.1.0/include/stdint.h \
- C:/msys64/mingw32/include/stdint.h D:/mountkit/Example/FreeRTOSConfig.h \
- D:/mountkit/Example/build/_deps/freertos-src/include/projdefs.h \
- D:/mountkit/Example/build/_deps/freertos-src/include/portable.h \
- D:/mountkit/Example/build/_deps/freertos-src/include/deprecated_definitions.h \
- D:/mountkit/Example/build/_deps/freertos-src/portable/MSVC-MingW/portmacro.h \
+ C:/msys64/mingw32/include/stdint.h C:/mountkit/Example/FreeRTOSConfig.h \
+ C:/mountkit/Example/build/_deps/freertos-src/include/projdefs.h \
+ C:/mountkit/Example/build/_deps/freertos-src/include/portable.h \
+ C:/mountkit/Example/build/_deps/freertos-src/include/deprecated_definitions.h \
+ C:/mountkit/Example/build/_deps/freertos-src/portable/MSVC-MingW/portmacro.h \
  C:/msys64/mingw32/include/winsock.h C:/msys64/mingw32/include/windows.h \
  C:/msys64/mingw32/include/sdkddkver.h C:/msys64/mingw32/include/excpt.h \
  C:/msys64/mingw32/lib/gcc/i686-w64-mingw32/15.1.0/include/stdarg.h \
@@ -143,5 +143,5 @@ _deps/freertos-build/CMakeFiles/freertos_kernel.dir/list.c.obj: \
  C:/msys64/mingw32/include/psdk_inc/_wsadata.h \
  C:/msys64/mingw32/include/psdk_inc/_xmitfile.h \
  C:/msys64/mingw32/include/psdk_inc/_wsa_errnos.h \
- D:/mountkit/Example/build/_deps/freertos-src/include/mpu_wrappers.h \
- D:/mountkit/Example/build/_deps/freertos-src/include/list.h
+ C:/mountkit/Example/build/_deps/freertos-src/include/mpu_wrappers.h \
+ C:/mountkit/Example/build/_deps/freertos-src/include/list.h

@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"D:/mountkit/Example/build/_deps/freertos-subbuild/cmake_install.cmake"
+		"C:/mountkit/Example/build/_deps/freertos-subbuild/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

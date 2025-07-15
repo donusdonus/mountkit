@@ -56,10 +56,10 @@ RM = C:\msys64\mingw32\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\mountkit\Example
+CMAKE_SOURCE_DIR = C:\mountkit\Example
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\mountkit\Example\build
+CMAKE_BINARY_DIR = C:\mountkit\Example\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,14 +86,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /d D:\mountkit\Example\build && $(CMAKE_COMMAND) -E cmake_progress_start D:\mountkit\Example\build\CMakeFiles D:\mountkit\Example\build\Mountkit\\CMakeFiles\progress.marks
-	cd /d D:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Mountkit/all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\mountkit\Example\build\CMakeFiles 0
+	cd /d C:\mountkit\Example\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\mountkit\Example\build\CMakeFiles C:\mountkit\Example\build\Mountkit\\CMakeFiles\progress.marks
+	cd /d C:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Mountkit/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\mountkit\Example\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d D:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Mountkit/clean
+	cd /d C:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Mountkit/clean
 .PHONY : clean
 
 # The main clean target
@@ -102,22 +102,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d D:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Mountkit/preinstall
+	cd /d C:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Mountkit/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d D:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Mountkit/preinstall
+	cd /d C:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Mountkit/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d D:\mountkit\Example\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\mountkit\Example\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Mountkit/CMakeFiles/Mountkit.dir/rule:
-	cd /d D:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Mountkit/CMakeFiles/Mountkit.dir/rule
+	cd /d C:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Mountkit/CMakeFiles/Mountkit.dir/rule
 .PHONY : Mountkit/CMakeFiles/Mountkit.dir/rule
 
 # Convenience name for target.
@@ -126,7 +126,7 @@ Mountkit: Mountkit/CMakeFiles/Mountkit.dir/rule
 
 # fast build rule for target.
 Mountkit/fast:
-	cd /d D:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f Mountkit\CMakeFiles\Mountkit.dir\build.make Mountkit/CMakeFiles/Mountkit.dir/build
+	cd /d C:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f Mountkit\CMakeFiles\Mountkit.dir\build.make Mountkit/CMakeFiles/Mountkit.dir/build
 .PHONY : Mountkit/fast
 
 Mountkit.obj: Mountkit.cpp.obj
@@ -134,7 +134,7 @@ Mountkit.obj: Mountkit.cpp.obj
 
 # target to build an object file
 Mountkit.cpp.obj:
-	cd /d D:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f Mountkit\CMakeFiles\Mountkit.dir\build.make Mountkit/CMakeFiles/Mountkit.dir/Mountkit.cpp.obj
+	cd /d C:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f Mountkit\CMakeFiles\Mountkit.dir\build.make Mountkit/CMakeFiles/Mountkit.dir/Mountkit.cpp.obj
 .PHONY : Mountkit.cpp.obj
 
 Mountkit.i: Mountkit.cpp.i
@@ -142,7 +142,7 @@ Mountkit.i: Mountkit.cpp.i
 
 # target to preprocess a source file
 Mountkit.cpp.i:
-	cd /d D:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f Mountkit\CMakeFiles\Mountkit.dir\build.make Mountkit/CMakeFiles/Mountkit.dir/Mountkit.cpp.i
+	cd /d C:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f Mountkit\CMakeFiles\Mountkit.dir\build.make Mountkit/CMakeFiles/Mountkit.dir/Mountkit.cpp.i
 .PHONY : Mountkit.cpp.i
 
 Mountkit.s: Mountkit.cpp.s
@@ -150,7 +150,7 @@ Mountkit.s: Mountkit.cpp.s
 
 # target to generate assembly for a file
 Mountkit.cpp.s:
-	cd /d D:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f Mountkit\CMakeFiles\Mountkit.dir\build.make Mountkit/CMakeFiles/Mountkit.dir/Mountkit.cpp.s
+	cd /d C:\mountkit\Example\build && $(MAKE) $(MAKESILENT) -f Mountkit\CMakeFiles\Mountkit.dir\build.make Mountkit/CMakeFiles/Mountkit.dir/Mountkit.cpp.s
 .PHONY : Mountkit.cpp.s
 
 # Help Target
@@ -176,6 +176,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d D:\mountkit\Example\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\mountkit\Example\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
