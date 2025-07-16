@@ -11,8 +11,6 @@ target_include_directories(freertos_config INTERFACE
   ${CMAKE_CURRENT_SOURCE_DIR}  # FreeRTOSConfig.h อยู่ที่นี่
 )
 
-
-
 include(FetchContent)
 FetchContent_Declare(
   freertos

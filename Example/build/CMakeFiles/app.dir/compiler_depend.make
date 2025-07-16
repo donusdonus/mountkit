@@ -1301,10 +1301,12 @@ CMakeFiles/app.dir/_deps/freertos-src/timers.c.obj: _deps/freertos-src/timers.c 
   C:/msys64/mingw32/lib/gcc/i686-w64-mingw32/15.1.0/include/xmmintrin.h
 
 CMakeFiles/app.dir/main.cpp.obj: C:/mountkit/Example/main.cpp \
+  C:/mountkit/src/Mountkit.h \
   C:/msys64/mingw32/include/_mingw.h \
   C:/msys64/mingw32/include/_mingw_mac.h \
   C:/msys64/mingw32/include/_mingw_off_t.h \
   C:/msys64/mingw32/include/_mingw_secapi.h \
+  C:/msys64/mingw32/include/_timeval.h \
   C:/msys64/mingw32/include/assert.h \
   C:/msys64/mingw32/include/c++/15.1.0/bits/std_abs.h \
   C:/msys64/mingw32/include/c++/15.1.0/cstdlib \
@@ -1319,16 +1321,21 @@ CMakeFiles/app.dir/main.cpp.obj: C:/mountkit/Example/main.cpp \
   C:/msys64/mingw32/include/errno.h \
   C:/msys64/mingw32/include/limits.h \
   C:/msys64/mingw32/include/malloc.h \
+  C:/msys64/mingw32/include/pthread_compat.h \
+  C:/msys64/mingw32/include/pthread_time.h \
   C:/msys64/mingw32/include/sdks/_mingw_ddk.h \
   C:/msys64/mingw32/include/sec_api/stdio_s.h \
   C:/msys64/mingw32/include/sec_api/stdlib_s.h \
   C:/msys64/mingw32/include/sec_api/string_s.h \
+  C:/msys64/mingw32/include/sec_api/sys/timeb_s.h \
   C:/msys64/mingw32/include/stddef.h \
   C:/msys64/mingw32/include/stdint.h \
   C:/msys64/mingw32/include/stdio.h \
   C:/msys64/mingw32/include/stdlib.h \
   C:/msys64/mingw32/include/string.h \
   C:/msys64/mingw32/include/swprintf.inl \
+  C:/msys64/mingw32/include/sys/timeb.h \
+  C:/msys64/mingw32/include/time.h \
   C:/msys64/mingw32/include/vadefs.h \
   C:/msys64/mingw32/lib/gcc/i686-w64-mingw32/15.1.0/include/limits.h \
   C:/msys64/mingw32/lib/gcc/i686-w64-mingw32/15.1.0/include/mm_malloc.h \
@@ -1336,6 +1343,12 @@ CMakeFiles/app.dir/main.cpp.obj: C:/mountkit/Example/main.cpp \
   C:/msys64/mingw32/lib/gcc/i686-w64-mingw32/15.1.0/include/stdint.h \
   C:/msys64/mingw32/lib/gcc/i686-w64-mingw32/15.1.0/include/syslimits.h
 
+
+C:/msys64/mingw32/include/sys/timeb.h:
+
+C:/msys64/mingw32/include/sec_api/sys/timeb_s.h:
+
+C:/msys64/mingw32/include/pthread_time.h:
 
 C:/msys64/mingw32/include/c++/15.1.0/stdlib.h:
 
@@ -1352,6 +1365,8 @@ _deps/freertos-src/include/stack_macros.h:
 _deps/freertos-src/tasks.c:
 
 _deps/freertos-src/queue.c:
+
+C:/msys64/mingw32/include/pthread_compat.h:
 
 _deps/freertos-src/portable/MemMang/heap_4.c:
 
@@ -1378,6 +1393,8 @@ C:/msys64/mingw32/include/wtypesbase.h:
 C:/msys64/mingw32/include/wow64apiset.h:
 
 C:/msys64/mingw32/include/wnnc.h:
+
+C:/msys64/mingw32/include/time.h:
 
 C:/msys64/mingw32/include/winver.h:
 
@@ -1442,6 +1459,8 @@ C:/msys64/mingw32/include/joystickapi.h:
 C:/msys64/mingw32/include/winsmcrd.h:
 
 C:/msys64/mingw32/include/_mingw_stdarg.h:
+
+C:/mountkit/src/Mountkit.h:
 
 C:/msys64/mingw32/include/processthreadsapi.h:
 

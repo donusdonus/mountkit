@@ -34,4 +34,4 @@ CMakeFiles/app.dir/main.cpp.obj: C:\mountkit\Example\main.cpp \
  C:/msys64/mingw32/include/sec_api/sys/timeb_s.h \
  C:/msys64/mingw32/include/_timeval.h \
  C:/msys64/mingw32/include/pthread_time.h \
- C:/msys64/mingw32/include/pthread_compat.h
+ C:/msys64/mingw32/include/pthread_compat.h C:/mountkit/src/Mountkit.h

@@ -10,10 +10,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/4.0.3/CMakeSystem.cmake"
   "CMakeLists.txt"
   "freertos-populate-prefix/tmp/freertos-populate-mkdirs.cmake"
-  "C:/msys64/mingw32/share/cmake/Modules/CMakeDetermineSystem.cmake"
   "C:/msys64/mingw32/share/cmake/Modules/CMakeGenericSystem.cmake"
   "C:/msys64/mingw32/share/cmake/Modules/CMakeInitializeConfigs.cmake"
-  "C:/msys64/mingw32/share/cmake/Modules/CMakeSystem.cmake.in"
   "C:/msys64/mingw32/share/cmake/Modules/CMakeSystemSpecificInformation.cmake"
   "C:/msys64/mingw32/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake"
   "C:/msys64/mingw32/share/cmake/Modules/ExternalProject.cmake"
@@ -38,7 +36,6 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "CMakeFiles/4.0.3/CMakeSystem.cmake"
   "freertos-populate-prefix/tmp/freertos-populate-mkdirs.cmake"
   "freertos-populate-prefix/tmp/freertos-populate-gitclone.cmake"
   "freertos-populate-prefix/src/freertos-populate-stamp/freertos-populate-gitinfo.txt"
