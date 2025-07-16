@@ -1,4 +1,4 @@
-#include "Mountkit.h"
+#include "mountkit.h"
 
 // Conditional includes และ debug control
 #ifdef EMBEDDED_BUILD
@@ -36,7 +36,7 @@
 #endif
 
 // แก้ไขฟังก์ชัน write ให้ใช้ debug control ที่สอดคล้องกัน
-int Mountkit::write(MyFile *file, const char *str) {
+int mountkit::write(MyFile *file, const char *str) {
     if (!file || !str) {
         #ifdef LIB_DEBUG
             printf("Error: Invalid file or string\n");
@@ -48,7 +48,7 @@ int Mountkit::write(MyFile *file, const char *str) {
     return write(file, (uint8_t*)str, str_len);
 }
 
-int Mountkit::write(MyFile *file, uint8_t *data, size_t size) {
+int mountkit::write(MyFile *file, uint8_t *data, size_t size) {
     if (!file || !data || size == 0) {
         #ifdef LIB_DEBUG
             printf("Error: Invalid parameters\n");
@@ -97,7 +97,7 @@ int Mountkit::write(MyFile *file, uint8_t *data, size_t size) {
 }
 
 // แก้ไขฟังก์ชัน append
-int Mountkit::append(MyFile *file, const char *str) {
+int mountkit::append(MyFile *file, const char *str) {
     if (!file || !str) {
         #ifdef LIB_DEBUG
             printf("Error: Invalid file or string\n");
@@ -109,7 +109,7 @@ int Mountkit::append(MyFile *file, const char *str) {
     return append(file, (uint8_t*)str, str_len);
 }
 
-int Mountkit::append(MyFile *file, uint8_t *data, size_t size) {
+int mountkit::append(MyFile *file, uint8_t *data, size_t size) {
     if (!file || !data || size == 0) {
         #ifdef LIB_DEBUG
             printf("Error: Invalid parameters\n");
@@ -171,7 +171,7 @@ int Mountkit::append(MyFile *file, uint8_t *data, size_t size) {
 }
 
 // แก้ไขฟังก์ชัน read
-int Mountkit::read(MyFile *file, uint8_t *buffer, size_t size, size_t offset) {
+int mountkit::read(MyFile *file, uint8_t *buffer, size_t size, size_t offset) {
     if (!file || !buffer) {
         #ifdef LIB_DEBUG
             printf("Error: Invalid file or buffer\n");
@@ -199,7 +199,7 @@ int Mountkit::read(MyFile *file, uint8_t *buffer, size_t size, size_t offset) {
 }
 
 // แก้ไขฟังก์ชัน cat - User output ไม่ควรใช้ debug control
-void Mountkit::cat(MyFile *file) {
+void mountkit::cat(MyFile *file) {
     if (!file) {
         printf("Error: Invalid file\n");
         return;
@@ -249,7 +249,7 @@ void Mountkit::cat(MyFile *file) {
 }
 
 // แก้ไขฟังก์ชัน createFolder ให้ใช้ debug control
-void Mountkit::createFolder(MyFolder **folder, const char *name) {
+void mountkit::createFolder(MyFolder **folder, const char *name) {
     MyFolder *newFolder = (MyFolder*)malloc(sizeof(MyFolder));
     if (!newFolder) {
         #ifdef LIB_DEBUG
@@ -274,7 +274,7 @@ void Mountkit::createFolder(MyFolder **folder, const char *name) {
 }
 
 // free memory ของไฟล์ในโฟลเดอร์
-void Mountkit::freeFiles(MyFile *file) {
+void mountkit::freeFiles(MyFile *file) {
     while (file) {
         MyFile *next = file->next;
         free(file->name);
@@ -285,7 +285,7 @@ void Mountkit::freeFiles(MyFile *file) {
 }
 
 // ลบโฟลเดอร์และลูกทั้งหมด
-void Mountkit::removeFolder(MyFolder *folder) {
+void mountkit::removeFolder(MyFolder *folder) {
     if (!folder) return;
     freeFiles(folder->files);
     removeFolder(folder->subdir);
@@ -295,7 +295,7 @@ void Mountkit::removeFolder(MyFolder *folder) {
 }
 
 // ลบโฟลเดอร์และลูกทั้งหมด (เวอร์ชันที่ใช้ recursive)
-void Mountkit::removeFolderRecursive(MyFolder *folder) {
+void mountkit::removeFolderRecursive(MyFolder *folder) {
     if (!folder) return;
     // ลบไฟล์ในโฟลเดอร์
     freeFiles(folder->files);
@@ -311,7 +311,7 @@ void Mountkit::removeFolderRecursive(MyFolder *folder) {
 }
 
 // ลบโฟลเดอร์ตาม path
-void Mountkit::rmdir(MyFolder **root, const char *path) {
+void mountkit::rmdir(MyFolder **root, const char *path) {
     char buf[256];
     strncpy(buf, path, sizeof(buf)); buf[sizeof(buf)-1] = '\0';
     char *token = strtok(buf, "/");
@@ -336,7 +336,7 @@ void Mountkit::rmdir(MyFolder **root, const char *path) {
 }
 
 // mkdir: สร้าง path และ return pointer ไปยัง Folder สุดท้าย
-MyFolder* Mountkit::mkdir(MyFolder **root, const char *path) {
+MyFolder* mountkit::mkdir(MyFolder **root, const char *path) {
     if (!root || !path) {
         SET_ERROR_FLAG();
         return NULL;
@@ -376,7 +376,7 @@ MyFolder* Mountkit::mkdir(MyFolder **root, const char *path) {
 }
 
 // mk: สร้างไฟล์ใหม่ในโฟลเดอร์ (ไม่ซ้ำชื่อ) พร้อมกำหนด capacity
-MyFile* Mountkit::mk(MyFolder *folder, const char *filename) {
+MyFile* mountkit::mk(MyFolder *folder, const char *filename) {
     if (!folder || !filename) {
         SET_ERROR_FLAG();
         return NULL;
@@ -428,7 +428,7 @@ MyFile* Mountkit::mk(MyFolder *folder, const char *filename) {
 }
 
 // cd: เดิน path และคืน pointer ของตำแหน่งนั้น (รองรับ .. และ .)
-MyFolder* Mountkit::cd(MyFolder *root, const char *path) {
+MyFolder* mountkit::cd(MyFolder *root, const char *path) {
     if (!root || !path) return NULL;
     
     char buf[256];
@@ -501,7 +501,7 @@ MyFolder* Mountkit::cd(MyFolder *root, const char *path) {
 }
 
 // Helper function: หา parent directory ของ target
-MyFolder* Mountkit::findParent(MyFolder *root, MyFolder *target) {
+MyFolder* mountkit::findParent(MyFolder *root, MyFolder *target) {
     if (!root || !target || root == target) {
         return NULL; // ไม่พบหรือ target คือ root
     }
@@ -529,7 +529,7 @@ MyFolder* Mountkit::findParent(MyFolder *root, MyFolder *target) {
 }
 
 // pwd: แสดง path ปัจจุบัน
-void Mountkit::pwd(MyFolder *folder, MyFolder *root) {
+void mountkit::pwd(MyFolder *folder, MyFolder *root) {
     if (!folder) return;
     const MyFolder *stack[128];
     int top = 0;
@@ -555,7 +555,7 @@ void Mountkit::pwd(MyFolder *folder, MyFolder *root) {
 }
 
 // PrintAllPath: แสดง path ของทุกโฟลเดอร์
-void Mountkit::PrintAllPath(MyFolder *folder, char *prefix) {
+void mountkit::PrintAllPath(MyFolder *folder, char *prefix) {
     if (!folder) return;
     char path[256];
     if (prefix[0] != '\0')
@@ -568,7 +568,7 @@ void Mountkit::PrintAllPath(MyFolder *folder, char *prefix) {
 }
 
 // rm: ลบไฟล์ในโฟลเดอร์ตามชื่อไฟล์
-int Mountkit::rm(MyFolder *folder, const char *filename) {
+int mountkit::rm(MyFolder *folder, const char *filename) {
     if (!folder || !filename) return 0;
     MyFile **cur = &folder->files;
     while (*cur) {
@@ -586,7 +586,7 @@ int Mountkit::rm(MyFolder *folder, const char *filename) {
 }
 
 // cp: คัดลอกไฟล์ในโฟลเดอร์ src ไปยังโฟลเดอร์ dst (ชื่อไฟล์เดียวกัน)
-int Mountkit::cp(MyFolder *src_folder, const char *filename, MyFolder *dst_folder) {
+int mountkit::cp(MyFolder *src_folder, const char *filename, MyFolder *dst_folder) {
     if (!src_folder || !dst_folder || !filename) return 0;
     // หาไฟล์ต้นทาง
     MyFile *src = src_folder->files;
@@ -624,7 +624,7 @@ int Mountkit::cp(MyFolder *src_folder, const char *filename, MyFolder *dst_folde
 }
 
 // mv: ย้ายไฟล์จากโฟลเดอร์ src ไปยังโฟลเดอร์ dst (ชื่อไฟล์เดียวกัน)
-int Mountkit::mv(MyFolder *src_folder, const char *filename, MyFolder *dst_folder) {
+int mountkit::mv(MyFolder *src_folder, const char *filename, MyFolder *dst_folder) {
     if (!src_folder || !dst_folder || !filename) return 0;
 
     // หาไฟล์ต้นทาง (และ pointer ไปยัง pointer ของมัน)
@@ -652,7 +652,7 @@ int Mountkit::mv(MyFolder *src_folder, const char *filename, MyFolder *dst_folde
 }
 
 // dir: แสดงรายการไฟล์และโฟลเดอร์ในไดเรกทอรีปัจจุบัน
-const char* Mountkit::dir(MyFolder *folder, bool show_details) {
+const char* mountkit::dir(MyFolder *folder, bool show_details) {
     // Static buffer สำหรับเก็บผลลัพธ์
     static char result_buffer[8192]; // 8KB buffer
     result_buffer[0] = '\0'; // Clear buffer
@@ -765,7 +765,7 @@ const char* Mountkit::dir(MyFolder *folder, bool show_details) {
 
 
 // ฟังก์ชันสำหรับทดสอบอัตโนมัติ
-void Mountkit::run_tests() {
+void mountkit::run_tests() {
     MyFolder *root = NULL;
 
     // Test 1: mkdir และ cd
@@ -814,7 +814,7 @@ void Mountkit::run_tests() {
 }
 
 // Ultimate Automated Test และ Report System - HARDCORE VERSION
-void Mountkit::auto_test_and_report() { 
+void mountkit::auto_test_and_report() { 
     #ifdef EMBEDDED_BUILD
         // ใช้ embedded test แทน
         embedded_test();
@@ -822,7 +822,7 @@ void Mountkit::auto_test_and_report() {
     #endif
     
     printf("=================================================================\n");
-    printf("                MOUNTKIT COMPREHENSIVE STRESS TEST               \n");
+    printf("                mountkit COMPREHENSIVE STRESS TEST               \n");
     printf("                      HARDCORE MODE ACTIVATED                    \n");
     printf("=================================================================\n\n");
     
@@ -1164,11 +1164,11 @@ void Mountkit::auto_test_and_report() {
     double success_rate = total_tests > 0 ? (total_pass * 100.0) / total_tests : 0;
     
     if (success_rate >= 99.0) {
-        printf("   [GRADE] GRADE: A+ (EXCELLENT) - Mountkit is highly reliable!\n");
+        printf("   [GRADE] GRADE: A+ (EXCELLENT) - mountkit is highly reliable!\n");
     } else if (success_rate >= 95.0) {
-        printf("   [GRADE] GRADE: A (VERY GOOD) - Mountkit is well tested!\n");
+        printf("   [GRADE] GRADE: A (VERY GOOD) - mountkit is well tested!\n");
     } else if (success_rate >= 90.0) {
-        printf("   [GRADE] GRADE: B+ (GOOD) - Mountkit is solid!\n");
+        printf("   [GRADE] GRADE: B+ (GOOD) - mountkit is solid!\n");
     } else if (success_rate >= 80.0) {
         printf("   [GRADE] GRADE: B (ACCEPTABLE) - Some improvements needed\n");
     } else {
@@ -1195,7 +1195,7 @@ void Mountkit::auto_test_and_report() {
     printf("\n");
     if (total_fail == 0) {
         printf("[SUCCESS] PERFECT SCORE! ALL %d TESTS PASSED!\n", total_tests);
-        printf("[STATUS]  MOUNTKIT IS CERTIFIED PRODUCTION READY!\n");
+        printf("[STATUS]  mountkit IS CERTIFIED PRODUCTION READY!\n");
     } else if (critical_failures == 0) {
         printf("[GOOD]    EXCELLENT PERFORMANCE! Minor issues detected but no critical failures!\n");
         printf("[STATUS]  %d tests need attention out of %d total tests\n", total_fail, total_tests);
@@ -1216,7 +1216,7 @@ void Mountkit::auto_test_and_report() {
 
 // เพิ่มฟังก์ชัน embedded test ด้วย ASCII characters
 #ifdef EMBEDDED_BUILD
-void Mountkit::embedded_test() {
+void mountkit::embedded_test() {
     CLEAR_ERROR_FLAG();
     
     printf("=== EMBEDDED SYSTEM TEST START ===\n");
@@ -1295,17 +1295,17 @@ void Mountkit::embedded_test() {
     printf("=== EMBEDDED TEST COMPLETE ===\n");
 }
 
-bool Mountkit::hasError() {
+bool mountkit::hasError() {
     return CHECK_ERROR_FLAG();
 }
 
-void Mountkit::clearError() {
+void mountkit::clearError() {
     CLEAR_ERROR_FLAG();
 }
 #endif
 
 // เพิ่มฟังก์ชัน calculateFolderCapacity ที่ขาดหาย
-size_t Mountkit::calculateFolderCapacity(MyFolder *folder, bool include_subdirs) {
+size_t mountkit::calculateFolderCapacity(MyFolder *folder, bool include_subdirs) {
     if (!folder) return 0;
     
     size_t total_size = 0;

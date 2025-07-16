@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(MountKitExample)
+project(mountkitExample)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_C_STANDARD 11)
@@ -21,8 +21,8 @@ set(CMAKE_BUILD_TYPE Debug)
 #)
 #FetchContent_MakeAvailable(freertos)
 
-# ✅ เพิ่มไลบรารี Mountkit
-add_subdirectory(../src ${CMAKE_CURRENT_BINARY_DIR}/Mountkit)
+# ✅ เพิ่มไลบรารี mountkit
+add_subdirectory(../src ${CMAKE_CURRENT_BINARY_DIR}/mountkit)
 
 # ✅ สร้าง executable
 add_executable(app main.cpp)
@@ -47,6 +47,6 @@ add_executable(app main.cpp)
 # ✅ link libraries
 target_link_libraries(app
   PRIVATE
-  Mountkit
+  mountkit
 #  freertos_kernel
 )

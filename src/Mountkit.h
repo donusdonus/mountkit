@@ -1,5 +1,5 @@
-#ifndef __Mountkit_H__
-#define __Mountkit_H__
+#ifndef __mountkit_H__
+#define __mountkit_H__
 
 // Build configuration
 //#define EMBEDDED_BUILD  // Uncomment สำหรับ embedded build
@@ -9,7 +9,7 @@
 #include <stdint.h>
 #include <string.h>
 
-#define MOUNTKIT_DEBUG 
+#define mountkit_DEBUG 
 
 // Forward declarations
 typedef struct MyFile MyFile;
@@ -37,12 +37,12 @@ typedef struct MyFolder {
 } MyFolder;
 
 /**
- * @brief คลาส Mountkit - ระบบจัดการไฟล์และโฟลเดอร์ในหน่วยความจำ
+ * @brief คลาส mountkit - ระบบจัดการไฟล์และโฟลเดอร์ในหน่วยความจำ
  * 
  * ระบบไฟล์เสมือนที่ทำงานในหน่วยความจำ สามารถจำลองการทำงานของระบบไฟล์
  * แบบ Unix-like ได้ รองรับทั้ง desktop และ embedded systems
  */
-class Mountkit 
+class mountkit 
 {
 
     
@@ -380,4 +380,4 @@ private:
     MyFolder* findParent(MyFolder *root, MyFolder *target);
 };
 
-#endif // __Mountkit_H__
+#endif // __mountkit_H__
