@@ -3,7 +3,6 @@
 
 Mountkit/CMakeFiles/Mountkit.dir/Mountkit.cpp.obj
  C:/mountkit/src/Mountkit.cpp
- C:/mountkit/src/Mountkit.h
  C:/msys64/mingw32/include/_mingw.h
  C:/msys64/mingw32/include/_mingw_mac.h
  C:/msys64/mingw32/include/_mingw_off_t.h
@@ -11,7 +10,10 @@ Mountkit/CMakeFiles/Mountkit.dir/Mountkit.cpp.obj
  C:/msys64/mingw32/include/_timeval.h
  C:/msys64/mingw32/include/assert.h
  C:/msys64/mingw32/include/c++/15.1.0/bits/std_abs.h
+ C:/msys64/mingw32/include/c++/15.1.0/bits/version.h
+ C:/msys64/mingw32/include/c++/15.1.0/cassert
  C:/msys64/mingw32/include/c++/15.1.0/cstdlib
+ C:/msys64/mingw32/include/c++/15.1.0/cstring
  C:/msys64/mingw32/include/c++/15.1.0/i686-w64-mingw32/bits/c++config.h
  C:/msys64/mingw32/include/c++/15.1.0/i686-w64-mingw32/bits/cpu_defines.h
  C:/msys64/mingw32/include/c++/15.1.0/i686-w64-mingw32/bits/os_defines.h
@@ -44,4 +46,5 @@ Mountkit/CMakeFiles/Mountkit.dir/Mountkit.cpp.obj
  C:/msys64/mingw32/lib/gcc/i686-w64-mingw32/15.1.0/include/stddef.h
  C:/msys64/mingw32/lib/gcc/i686-w64-mingw32/15.1.0/include/stdint.h
  C:/msys64/mingw32/lib/gcc/i686-w64-mingw32/15.1.0/include/syslimits.h
+ C:/mountkit/src/Mountkit.h
 
