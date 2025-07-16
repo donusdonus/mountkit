@@ -1,3 +1,0 @@
-C:/mountkit/Example/build/_deps/freertos-subbuild/CMakeFiles/freertos-populate.dir
-C:/mountkit/Example/build/_deps/freertos-subbuild/CMakeFiles/edit_cache.dir
-C:/mountkit/Example/build/_deps/freertos-subbuild/CMakeFiles/rebuild_cache.dir

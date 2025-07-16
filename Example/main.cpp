@@ -11,7 +11,8 @@ MyFolder *root = NULL; // เปลี่ยนจาก C เป็น root
 MyFolder *current_dir = NULL; // ตำแหน่งปัจจุบัน
 
 // สร้างฟังก์ชัน Linux-like path creation
-void createLinuxPath() {
+void createLinuxPath() 
+{
     printf("=================================================================\n");
     printf("               CREATING LINUX-LIKE DIRECTORY STRUCTURE          \n");
     printf("=================================================================\n\n");
@@ -166,99 +167,6 @@ void createLinuxPath() {
            mount.calculateFolderCapacity(root, true));
 }
 
-// ฟังก์ชัน Linux-like commands
-void linuxCommands() {
-    printf("=================================================================\n");
-    printf("                    LINUX-LIKE COMMAND TESTING                 \n");
-    printf("=================================================================\n\n");
-    
-    printf("Testing Linux-like navigation commands...\n\n");
-    
-    // pwd - print working directory
-    printf("$ pwd\n");
-    mount.pwd(current_dir, root);
-    printf("\n");
-    
-    // ls - list directory contents
-    printf("$ ls /\n");
-    MyFolder *root_dir = mount.cd(root, "/");
-    if (root_dir) {
-        mount.dir(root_dir, false);
-    }
-    printf("\n");
-    
-    // cd to /home/user
-    printf("$ cd /home/user\n");
-    current_dir = mount.cd(root, "home/user");
-    if (current_dir) {
-        printf("Changed to /home/user\n");
-        mount.pwd(current_dir, root);
-    }
-    printf("\n");
-    
-    // ls current directory
-    printf("$ ls\n");
-    mount.dir(current_dir, false);
-    printf("\n");
-    
-    // cat a file
-    printf("$ cat .bashrc\n");
-    MyFile *bashrc = NULL;
-    for (MyFile *file = current_dir->files; file; file = file->next) {
-        if (strcmp((char*)file->name, ".bashrc") == 0) {
-            bashrc = file;
-            break;
-        }
-    }
-    if (bashrc) {
-        mount.cat(bashrc);
-    }
-    printf("\n");
-    
-    // Create new file
-    printf("$ echo 'Hello World' > hello.txt\n");
-    MyFile *hello = mount.mk(current_dir, "hello.txt");
-    if (hello) {
-        mount.write(hello, "Hello World\n");
-        printf("File created successfully\n");
-    }
-    printf("\n");
-    
-    // Copy file
-    printf("$ cp hello.txt hello_backup.txt\n");
-    if (mount.cp(current_dir, "hello.txt", current_dir)) {
-        // Rename the copied file
-        printf("File copied successfully\n");
-    }
-    printf("\n");
-    
-    // Move to Documents
-    printf("$ mv hello.txt Documents/\n");
-    MyFolder *docs = mount.cd(root, "home/user/Documents");
-    if (docs && mount.mv(current_dir, "hello.txt", docs)) {
-        printf("File moved to Documents/\n");
-    }
-    printf("\n");
-    
-    // Show Documents content
-    printf("$ ls Documents/\n");
-    if (docs) {
-        mount.dir(docs, true);
-    }
-    printf("\n");
-    
-    // Find files (simulation)
-    printf("$ find /home -name '*.txt'\n");
-    printf("Finding .txt files in /home...\n");
-    MyFolder *home = mount.cd(root, "home");
-    if (home) {
-        mount.PrintAllPath(home, "/home");
-    }
-    printf("\n");
-    
-    printf("Linux command testing completed!\n\n");
-}
-
 // ฟังก์ชัน Ultimate Stress Test (แก้ไข Unicode)
 void ultimateStressTest() {
     printf("=================================================================\n");
@@ -278,76 +186,11 @@ void ultimateStressTest() {
     printf("[STATUS] ALL SYSTEMS TESTED AND VERIFIED!\n");
 }
 
-// ฟังก์ชัน system information
-void showSystemInfo() {
-    printf("=================================================================\n");
-    printf("                        SYSTEM INFORMATION                      \n");
-    printf("=================================================================\n\n");
-    
-    if (root) {
-        size_t total_memory = mount.calculateFolderCapacity(root, true);
-        printf("Filesystem: Mountkit Linux-like FS\n");
-        printf("Total Memory Used: %zu bytes (%.2f KB)\n", total_memory, total_memory / 1024.0);
-        printf("Mount Point: /\n");
-        printf("File System Type: Virtual Memory FS\n");
-        printf("Status: Online\n\n");
-        
-        // Count directories and files
-        int dir_count = 0;
-        int file_count = 0;
-        
-        // Simple counting (you might want to implement a recursive counter)
-        printf("Directory Structure Summary:\n");
-        printf("- Root directories: 18\n");
-        printf("- System configuration files: Multiple\n");
-        printf("- User files: Available\n");
-        printf("- Log files: Active\n");
-        printf("- Executable files: Simulated\n\n");
-    } else {
-        printf("No filesystem mounted.\n\n");
-    }
-}
-
 int main() {
-    printf("=================================================================\n");
-    printf("                    MOUNTKIT LINUX FILESYSTEM DEMO              \n");
-    printf("=================================================================\n\n");
-    
-    // 1. สร้าง Linux-like directory structure
-    printf("Step 1: Creating Linux-like directory structure...\n");
     createLinuxPath();
     
-    // 2. แสดง system information
-    printf("Step 2: System Information\n");
-    showSystemInfo();
+     mount.PrintAllPath(root, ""); 
     
-    // 3. ทดสอบ Linux commands
-    printf("Step 3: Testing Linux-like commands...\n");
-    linuxCommands();
-    
-    // 4. รัน Ultimate Stress Test
-    printf("Step 4: Running comprehensive stress test...\n");
-    ultimateStressTest();
-    
-    // 5. Final system status
-    printf("\n=================================================================\n");
-    printf("                           DEMO COMPLETED                       \n");
-    printf("=================================================================\n");
-    printf("Mountkit Linux-like filesystem demonstration completed successfully!\n");
-    printf("Total system memory usage: %zu bytes\n", 
-           root ? mount.calculateFolderCapacity(root, true) : 0);
-    printf("All operations verified and tested.\n\n");
-
-    mount.PrintAllPath(root, ""); // Print all paths for verification
-
-    
-    /* Cleanup */
-    /*
-    if (root) {
-        mount.removeFolder(root);
-        printf("Filesystem unmounted and memory cleaned up.\n");
-    }
-    */
-    
+     
     return 0;
 }

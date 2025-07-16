@@ -39,11 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/mountkit/Example/build/_deps/freertos-build/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
   include("C:/mountkit/Example/build/Mountkit/cmake_install.cmake")
 endif()
 
